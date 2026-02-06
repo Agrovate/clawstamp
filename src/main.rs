@@ -24,5 +24,5 @@ async fn main() {
     let dirs:Vec<&str> = loc.split("/").collect();
     let dir = dirs[dirs.len() - 1];
     
-    sqlx::query("insert ").execute(&db).await.unwrap();
+    sqlx::query!("insert into times (dir, start) values(?, ?)",dir, 1).execute(&db).await.unwrap();
 }
