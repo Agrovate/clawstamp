@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+chrono = "0.4.43"
 dotenvy = "0.15.7"
-sqlx = {version = "0.8.6", features = ["runtime-tokio-native-tls","sqlite"]}
+sqlx = {version = "0.8.6", features = ["runtime-tokio-native-tls","sqlite", "chrono"]}
 tokio = {version = "1.49.0", features = ["full"]}
